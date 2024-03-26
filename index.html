@@ -32,6 +32,19 @@
             border: none;
             border-radius: 7px;
             color: white;
+            cursor: pointer;
+        }
+        
+        @keyframes roll{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .animate{
+            animation: roll 1s infinite;
         }
     </style>
 </head>
@@ -80,6 +93,15 @@
                     break;
 
             }
+
+            diceImg.classList.add("animate");
+
+
+            setTimeout(()=>{
+
+                diceImg.classList.remove("animate");
+            },1000);
+       
         }
     </script>
 
